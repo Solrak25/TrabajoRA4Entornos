@@ -1,73 +1,72 @@
-import java.util.Scanner;
-
-//Clase principal que implementa una calculadora básica por consola.
-
+/**
+ * Clase que representa una calculadora simple.
+ * Permite realizar operaciones aritméticas como sumar y restar.
+ */
 public class Calculadora {
-    
-    //Método principal que ejecuta la lógica de la calculadora.
 
-    public static void main(String[] args) {
-        // Crear un objeto Scanner para leer entradas del usuario
-        Scanner scanner = new Scanner(System.in);
-        // Variable para controlar si el programa debe continuar o salir
-        boolean salir = false;
+    /**
+     * Suma dos números enteros.
+     * @param a El primer número a sumar.
+     * @param b El segundo número a sumar.
+     * @return La suma de los dos números.
+     */
+    public int sumar(int a, int b) {
+        return a + b; // Realiza la suma de los dos números
+    }
 
-        // Bucle principal que muestra el menú y realiza las operaciones
-        while (!salir) {
-            // Mostrar el menú de opciones
-            System.out.println("Calculadora por consola");
-            System.out.println("1. Sumar");
-            System.out.println("2. Restar");
-            System.out.println("3. Multiplicar");
-            System.out.println("4. Dividir");
-            System.out.println("5. Salir");
-            System.out.print("Elige una opción: ");
+    /**
+     * Resta dos números enteros.
+     * @param a El primer número (minuendo).
+     * @param b El segundo número (sustraendo).
+     * @return La diferencia entre los dos números.
+     */
+    public int restar(int a, int b) {
+        return a - b; // Realiza la resta de los dos números
+    }
 
-            // Leer la opción elegida por el usuario
-            int opcion = scanner.nextInt();
+    /**
+     * Multiplica dos números enteros.
+     * @param a El primer número a multiplicar.
+     * @param b El segundo número a multiplicar.
+     * @return El producto de los dos números.
+     */
+    public int multiplicar(int a, int b) {
+        return a * b; // Realiza la multiplicación de los dos números
+    }
 
-            // Comprobar si la opción es una operación válida
-            if (opcion >= 1 && opcion <= 4) {
-                // Solicitar el primer número al usuario
-                System.out.print("Introduce el primer número: ");
-                double num1 = scanner.nextDouble();
-
-                // Solicitar el segundo número al usuario
-                System.out.print("Introduce el segundo número: ");
-                double num2 = scanner.nextDouble();
-
-                // Realizar la operación correspondiente según la opción elegida
-                if (opcion == 1) {
-                    // Suma de dos números
-                    System.out.println("Resultado de la suma: " + (num1 + num2));
-                } else if (opcion == 2) {
-                    // Resta de dos números
-                    System.out.println("Resultado de la resta: " + (num1 - num2));
-                } else if (opcion == 3) {
-                    // Multiplicación de dos números
-                    System.out.println("Resultado de la multiplicación: " + (num1 * num2));
-                } else if (opcion == 4) {
-                    // División de dos números, verificando que no sea división por cero
-                    if (num2 != 0) {
-                        System.out.println("Resultado de la división: " + (num1 / num2));
-                    } else {
-                        System.out.println("Error: No se puede dividir entre cero.");
-                    }
-                }
-            } else if (opcion == 5) {
-                // Si el usuario elige la opción de salir
-                salir = true;
-                System.out.println("Saliendo de la calculadora...");
-            } else {
-                // Si la opción ingresada no es válida
-                System.out.println("Opción no válida. Por favor, elige una opción entre 1 y 5.");
-            }
-
-            // Espacio en blanco entre iteraciones del menú
-            System.out.println();
+    /**
+     * Divide dos números enteros.
+     * @param a El dividendo.
+     * @param b El divisor.
+     * @return El cociente de la división.
+     * @throws ArithmeticException Si el divisor es 0.
+     */
+    public double dividir(int a, int b) throws ArithmeticException {
+        if (b == 0) {
+            throw new ArithmeticException("No se puede dividir por cero");
         }
+        return (double) a / b; // Realiza la división entre los dos números
+    }
 
-        // Cerrar el objeto Scanner
-        scanner.close();
+    /**
+     * Método principal que ejecuta la calculadora.
+     * Este método es un ejemplo de cómo usar la clase Calculadora.
+     * @param args Argumentos de la línea de comandos (no se usan en este caso).
+     */
+    public static void main(String[] args) {
+        // Crear una instancia de la calculadora
+        Calculadora calc = new Calculadora();
+
+        // Realizar algunas operaciones
+        int suma = calc.sumar(5, 3);
+        int resta = calc.restar(5, 3);
+        int multiplicacion = calc.multiplicar(5, 3);
+        double division = calc.dividir(5, 3);
+
+        // Mostrar los resultados
+        System.out.println("Suma: " + suma);
+        System.out.println("Resta: " + resta);
+        System.out.println("Multiplicación: " + multiplicacion);
+        System.out.println("División: " + division);
     }
 }
