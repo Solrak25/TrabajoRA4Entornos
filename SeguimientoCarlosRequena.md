@@ -67,13 +67,28 @@
     - `git merge optimizacion-codigo`
 - Realizar un commit para guardar u sibir a GitHup
 
-# Imagenes
-
-![Imagen 1](Imagenes/1.png)  
+## Imagenes
+- 1  
+![Imagen 1](Imagenes/1.png) 
+- 2   
 ![Imagen 2](Imagenes/2.png)  
+- 3  
 ![Imagen 3](Imagenes/3.png)  
+- 4  
 ![Imagen 4](Imagenes/4.png)  
-![Imagen 5](Imagenes/5.png)  
+- 5  
+![Imagen 5](Imagenes/5.png) 
+- 6   
 ![Imagen 6](Imagenes/6.png)  
+- 7  
 ![Imagen 7](Imagenes/7.png)  
-![Imagen 8](Imagenes/8.png)  
+- 8  
+![Imagen 8](Imagenes/8.png)
+- 9  
+![Imagen 9](Imagenes/9.png) 
+- 10  
+![Imagen 10](Imagenes/10.png) 
+- 11  
+![Imagen 11](Imagenes/11.png) 
+- 12  
+![Imagen 12](Imagenes/12.png) 
