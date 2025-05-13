@@ -1,12 +1,18 @@
+
+
+
+//Es la clase que tenia antes de optimizarla por si querias verla
+
+
+
 /**
  * Clase que representa una calculadora simple.
- * Permite realizar operaciones aritméticas básicas como suma, resta, multiplicación y división.
+ * Permite realizar operaciones aritméticas como sumar y restar.
  */
-public class Calculadora {
+public class CalculadoraSinOptimizar {
 
     /**
      * Suma dos números enteros.
-     *
      * @param a El primer número a sumar.
      * @param b El segundo número a sumar.
      * @return La suma de los dos números.
@@ -17,7 +23,6 @@ public class Calculadora {
 
     /**
      * Resta dos números enteros.
-     *
      * @param a El primer número (minuendo).
      * @param b El segundo número (sustraendo).
      * @return La diferencia entre los dos números.
@@ -28,7 +33,6 @@ public class Calculadora {
 
     /**
      * Multiplica dos números enteros.
-     *
      * @param a El primer número a multiplicar.
      * @param b El segundo número a multiplicar.
      * @return El producto de los dos números.
@@ -39,11 +43,10 @@ public class Calculadora {
 
     /**
      * Divide dos números enteros.
-     *
      * @param a El dividendo.
      * @param b El divisor.
-     * @return El cociente de la división como un número de punto flotante.
-     * @throws ArithmeticException Si el divisor es 0, ya que no es posible realizar una división por cero.
+     * @return El cociente de la división.
+     * @throws ArithmeticException Si el divisor es 0.
      */
     public double dividir(int a, int b) throws ArithmeticException {
         if (b == 0) {
@@ -53,31 +56,24 @@ public class Calculadora {
     }
 
     /**
-     * Método principal que demuestra el uso de la clase Calculadora.
-     * Realiza y muestra el resultado de varias operaciones básicas.
-     *
+     * Método principal que ejecuta la calculadora.
+     * Este método es un ejemplo de cómo usar la clase Calculadora.
      * @param args Argumentos de la línea de comandos (no se usan en este caso).
      */
     public static void main(String[] args) {
         // Crear una instancia de la calculadora
         Calculadora calc = new Calculadora();
 
-        // Ejemplo de entradas
-        int a = 5;
-        int b = 3;
-
-        // Realizar y almacenar las operaciones
-        int suma = calc.sumar(a, b);
-        int resta = calc.restar(a, b);
-        int multiplicacion = calc.multiplicar(a, b);
-        double division = calc.dividir(a, b);
+        // Realizar algunas operaciones
+        int suma = calc.sumar(5, 3);
+        int resta = calc.restar(5, 3);
+        int multiplicacion = calc.multiplicar(5, 3);
+        double division = calc.dividir(5, 3);
 
         // Mostrar los resultados
-        System.out.println("Resultados de las operaciones:");
-        System.out.println("Suma (" + a + " + " + b + "): " + suma);
-        System.out.println("Resta (" + a + " - " + b + "): " + resta);
-        System.out.println("Multiplicación (" + a + " * " + b + "): " + multiplicacion);
-        System.out.println("División (" + a + " / " + b + "): " + division);
+        System.out.println("Suma: " + suma);
+        System.out.println("Resta: " + resta);
+        System.out.println("Multiplicación: " + multiplicacion);
+        System.out.println("División: " + division);
     }
 }
-

@@ -47,3 +47,33 @@
     - `@param a El primer número a sumar`  
     - `@param b El segundo número a sumar`  
     - `@return La suma de los dos números`
+- Hay que usar el comando para crear el javadoc  
+    - `javadoc -d docs archivo.java`
+
+## Optimizacion del codigo
+- Para la optimizacion primero hay que er que podemos mejorar en el codigo
+- Despues vamos a crear una rama dentro del directorio  
+    - `git checkout -b optimizacion-codigo`
+- Realizar los cambios pertinentes para la optimizacion
+- Guardado de los cambios
+    - `git add .`
+- Crear un comit
+    - `git commit -m "Descripcion"`
+- Se puede subir la rama al repositorio de GitHup para guardarla  
+    - `git push origin optimizacion-codigo`
+- Vuelvo a la rama principal
+    - `git checkout main`
+- Fusionar las ramas
+    - `git merge optimizacion-codigo`
+- Realizar un commit para guardar u sibir a GitHup
+
+# Imagenes
+
+![Imagen 1](Imagenes/1.png)  
+![Imagen 2](Imagenes/2.png)  
+![Imagen 3](Imagenes/3.png)  
+![Imagen 4](Imagenes/4.png)  
+![Imagen 5](Imagenes/5.png)  
+![Imagen 6](Imagenes/6.png)  
+![Imagen 7](Imagenes/7.png)  
+![Imagen 8](Imagenes/8.png)  
