@@ -37,8 +37,13 @@
     2. Mostar el historial de commits  
         `git log`
 - Clonar y colaborar
-    1. Clonar un repositorio existente  
+    - Clonar un repositorio existente  
         `git clone https://github.com/usuario/nombre-repositorio.git`
 
 ## Generación de documentación para Java, con Javadoc
-
+- Crear el programa en java  
+    - Yo he creado un programa de calculadora sencillo sin funciones para despues optimizar
+- Añadirle comentarios java doc, como:  
+    - `@param a El primer número a sumar`  
+    - `@param b El segundo número a sumar`  
+    - `@return La suma de los dos números`
